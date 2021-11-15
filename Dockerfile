@@ -55,7 +55,8 @@ RUN echo 'zend_extension=xdebug.so \n\
          xdebug.remote_enable=1 \n\
          xdebug.mode=debug \n\
          xdebug.remote=debug \n\
-         xdebug.client_port="9003"' > /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+         xdebug.client_port="9003" \n\
+         xdebug.client_host=host.docker.internal' > /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 RUN docker-php-ext-install bcmath
 RUN docker-php-ext-install curl
